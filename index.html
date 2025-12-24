@@ -1,1 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0B0B0B" />
+  <meta name="description" content="Noiva — luxury clothing brand. Elevated essentials, premium quality, modern design." />
 
+  <title>Noiva — Luxury Clothing</title>
+
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Noiva — Luxury Clothing" />
+  <meta property="og:description" content="Elevated essentials. Premium quality. Modern luxury." />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+  <!-- Top announcement bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="pill">
+          <span class="dot"></span>
+          Open Today
+        </span>
+        <span class="topbar__meta">Luxury drop curated weekly</span>
+      </div>
+      <div class="topbar__right">
+        <a class="topbar__link" href="#store">Store Info</a>
+        <span class="sep">•</span>
+        <a class="topbar__link" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Noiva Home">
+        <span class="brand__mark">N</span>
+        <span class="brand__name">Noiva</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#new">New</a>
+        <a href="#collections">Collections</a>
+        <a href="#lookbook">Lookbook</a>
+        <a href="#store">Store</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="iconbtn" id="searchBtn" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm10 4-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="iconbtn" id="cartBtn" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 7h15l-1.5 9h-12L6 7Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M6 7 5 3H2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm9 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          <span class="badge" id="cartCount" aria-label="Cart items">0</span>
+        </button>
+        <button class="iconbtn navtoggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span class="bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+      <div class="mobileNav__panel">
+        <div class="mobileNav__top">
+          <span class="mobileNav__title">Menu</span>
+          <button class="iconbtn" id="navClose" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6 18 18M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <a href="#new" class="mobileNav__link">New</a>
+        <a href="#collections" class="mobileNav__link">Collections</a>
+        <a href="#lookbook" class="mobileNav__link">Lookbook</a>
+        <a href="#store" class="mobileNav__link">Store</a>
+        <a href="#contact" class="mobileNav__link">Contact</a>
+        <div class="mobileNav__cta">
+          <button class="btn btn--primary" data-scroll="#new">Shop New Arrivals</button>
+        </div>
+      </div>
+      <div class="mobileNav__backdrop" id="navBackdrop" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <div class="kicker">
+            <span class="kicker__line"></span>
+            <span class="kicker__text">Modern Luxury • Noiva</span>
+          </div>
+          <h1 class="hero__title">
+            Luxury pieces, <span class="accent">clean finish</span>, everyday confidence.
+          </h1>
+          <p class="hero__sub">
+            Curated drops designed to feel premium the moment you put them on—minimal, bold, and built to last.
+          </p>
+
+          <div class="hero__cta">
+            <button class="btn btn--primary" data-scroll="#new">Shop New</button>
+            <button class="btn btn--ghost" data-scroll="#collections">Explore Collections</button>
+          </div>
+
+          <div class="hero__meta">
+            <div class="metaCard">
+              <div class="metaCard__label">In-store pickup</div>
+              <div class="metaCard__value">Available daily</div>
+            </div>
+            <div class="metaCard">
+              <div class="metaCard__label">Payment</div>
+              <div class="metaCard__value">Cash • Card • Contactless</div>
+            </div>
+            <div class="metaCard">
+              <div class="metaCard__label">Location</div>
+              <div class="metaCard__value">10220 W Reflections Blvd</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__media reveal">
+          <div class="heroCard">
+            <img
+              class="heroCard__img"
+              alt="Luxury clothing editorial"
+              src="https://images.unsplash.com/photo-1520975958225-2a29f9c36f42?auto=format&fit=crop&w=1400&q=80"
+              loading="eager"
+            />
+            <div class="heroCard__overlay">
+              <div class="heroCard__tag">Limited Drop</div>
+              <div class="heroCard__title">Winter Capsule</div>
+              <button class="mini" data-scroll="#new">View Items</button>
+            </div>
+          </div>
+          <div class="hero__side">
+            <div class="sideCard">
+              <img
+                alt="Minimal fashion detail"
+                src="https://images.unsplash.com/photo-1520975680112-9a02e7435e44?auto=format&fit=crop&w=900&q=80"
+                loading="lazy"
+              />
+            </div>
+            <div class="sideCard sideCard--accent">
+              <div class="sideCard__icon" aria-hidden="true">✦</div>
+              <div class="sideCard__headline">Premium Feel</div>
+              <div class="sideCard__text">Soft structure. Clean seams. Luxury tone.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticker">
+        <div class="ticker__track">
+          <span>NOIVA</span><span>•</span><span>LUXURY</span><span>•</span><span>NEW DROP</span><span>•</span>
+          <span>NOIVA</span><span>•</span><span>LUXURY</span><span>•</span><span>NEW DROP</span><span>•</span>
+          <span>NOIVA</span><span>•</span><span>LUXURY</span><span>•</span><span>NEW DROP</span><span>•</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section" id="new">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">New Arrivals</h2>
+          <p class="section__sub">Four premium picks to set the tone.</p>
+          <div class="chipRow" role="tablist" aria-label="Product filters">
+            <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="chip" data-filter="outerwear" role="tab" aria-selected="false">Outerwear</button>
+            <button class="chip" data-filter="tops" role="tab" aria-selected="false">Tops</button>
+            <button class="chip" data-filter="sets" role="tab" aria-selected="false">Sets</button>
+          </div>
+        </div>
+
+        <div class="grid products" id="productGrid">
+          <!-- Product 1 -->
+          <article class="product reveal" data-category="outerwear">
+            <button class="product__media" data-quickview="1" aria-label="Quick view Noiva Signature Jacket">
+              <img
+                src="https://images.unsplash.com/photo-1520975680112-9a02e7435e44?auto=format&fit=crop&w=1200&q=80"
+                alt="Noiva Signature Jacket"
+                loading="lazy"
+              />
+              <span class="product__pill">New</span>
+            </button>
+            <div class="product__body">
+              <div class="product__top">
+                <h3 class="product__name">Signature Jacket</h3>
+                <span class="product__price">$160</span>
+              </div>
+              <p class="product__desc">Structured fit. Clean silhouette. Luxury black finish.</p>
+              <div class="product__actions">
+                <button class="btn btn--small" data-add="Signature Jacket|160">Add to Cart</button>
+                <button class="btn btn--small btn--ghost" data-quickview="1">Quick View</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product reveal" data-category="tops">
+            <button class="product__media" data-quickview="2" aria-label="Quick view Noiva Baby Blue Tee">
+              <img
+                src="https://images.unsplash.com/photo-1520975958225-2a29f9c36f42?auto=format&fit=crop&w=1200&q=80"
+                alt="Noiva Baby Blue Tee"
+                loading="lazy"
+              />
+              <span class="product__pill product__pill--blue">Limited</span>
+            </button>
+            <div class="product__body">
+              <div class="product__top">
+                <h3 class="product__name">Baby Blue Tee</h3>
+                <span class="product__price">$68</span>
+              </div>
+              <p class="product__desc">Soft hand-feel. Minimal branding. Premium tone.</p>
+              <div class="product__actions">
+                <button class="btn btn--small" data-add="Baby Blue Tee|68">Add to Cart</button>
+                <button class="btn btn--small btn--ghost" data-quickview="2">Quick View</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product reveal" data-category="sets">
+            <button class="product__media" data-quickview="3" aria-label="Quick view Noiva Essential Set">
+              <img
+                src="https://images.unsplash.com/photo-1520975685579-3f3fe8b0e0d0?auto=format&fit=crop&w=1200&q=80"
+                alt="Noiva Essential Set"
+                loading="lazy"
+              />
+              <span class="product__pill">Best Seller</span>
+            </button>
+            <div class="product__body">
+              <div class="product__top">
+                <h3 class="product__name">Essential Set</h3>
+                <span class="product__price">$140</span>
+              </div>
+              <p class="product__desc">Matching set. Elevated comfort. Clean lines.</p>
+              <div class="product__actions">
+                <button class="btn btn--small" data-add="Essential Set|140">Add to Cart</button>
+                <button class="btn btn--small btn--ghost" data-quickview="3">Quick View</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product reveal" data-category="outerwear">
+            <button class="product__media" data-quickview="4" aria-label="Quick view Noiva Oversized Coat">
+              <img
+                src="https://images.unsplash.com/photo-1520975732131-0f5f0a6cc211?auto=format&fit=crop&w=1200&q=80"
+                alt="Noiva Oversized Coat"
+                loading="lazy"
+              />
+              <span class="product__pill product__pill--blue">Drop</span>
+            </button>
+            <div class="product__body">
+              <div class="product__top">
+                <h3 class="product__name">Oversized Coat</h3>
+                <span class="product__price">$220</span>
+              </div>
+              <p class="product__desc">Statement outerwear. Premium structure.</p>
+              <div class="product__actions">
+                <button class="btn btn--small" data-add="Oversized Coat|220">Add to Cart</button>
+                <button class="btn btn--small btn--ghost" data-quickview="4">Quick View</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections -->
+    <section class="section section--alt" id="collections">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Collections</h2>
+          <p class="section__sub">A simple lineup built for a premium lifestyle.</p>
+        </div>
+
+        <div class="grid cols reveal">
+          <a class="colCard" href="#new" aria-label="Shop Essentials">
+            <div class="colCard__top">
+              <span class="colCard__tag">Essentials</span>
+              <span class="colCard__arrow">↗</span>
+            </div>
+            <div class="colCard__title">Clean Basics</div>
+            <div class="colCard__desc">Tees, hoodies, and staples with luxury feel.</div>
+          </a>
+
+          <a class="colCard" href="#new" aria-label="Shop Outerwear">
+            <div class="colCard__top">
+              <span class="colCard__tag">Outerwear</span>
+              <span class="colCard__arrow">↗</span>
+            </div>
+            <div class="colCard__title">Statement Layers</div>
+            <div class="colCard__desc">Structured fits designed to elevate any look.</div>
+          </a>
+
+          <a class="colCard colCard--accent" href="#new" aria-label="Shop Sets">
+            <div class="colCard__top">
+              <span class="colCard__tag">Sets</span>
+              <span class="colCard__arrow">↗</span>
+            </div>
+            <div class="colCard__title">Matched Luxury</div>
+            <div class="colCard__desc">Coordinated pieces with premium tone.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lookbook -->
+    <section class="section" id="lookbook">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Lookbook</h2>
+          <p class="section__sub">Minimal. Clean. Luxury-forward.</p>
+        </div>
+
+        <div class="masonry reveal">
+          <figure class="shot">
+            <img src="https://images.unsplash.com/photo-1520975758340-c56f1f2f0c70?auto=format&fit=crop&w=1400&q=80" alt="Lookbook shot 1" loading="lazy">
+          </figure>
+          <figure class="shot">
+            <img src="https://images.unsplash.com/photo-1520975740165-5d6802e686c2?auto=format&fit=crop&w=1400&q=80" alt="Lookbook shot 2" loading="lazy">
+          </figure>
+          <figure class="shot">
+            <img src="https://images.unsplash.com/photo-1520975749735-3fae4f2e0d2c?auto=format&fit=crop&w=1400&q=80" alt="Lookbook shot 3" loading="lazy">
+          </figure>
+          <figure class="shot">
+            <img src="https://images.unsplash.com/photo-1520975748422-6d6ad72037d6?auto=format&fit=crop&w=1400&q=80" alt="Lookbook shot 4" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Info -->
+    <section class="section section--alt" id="store">
+      <div class="container storeGrid">
+        <div class="storeCard reveal">
+          <h2 class="section__title">Visit Noiva</h2>
+          <p class="section__sub">Come in-store for sizing, pickup, and drop updates.</p>
+
+          <div class="storeInfo">
+            <div class="infoRow">
+              <span class="infoKey">Address</span>
+              <span class="infoVal">10220 W Reflections Blvd</span>
+            </div>
+            <div class="infoRow">
+              <span class="infoKey">Phone</span>
+              <a class="infoVal link" href="tel:19546295079">(954) 629-5079</a>
+            </div>
+            <div class="infoRow">
+              <span class="infoKey">Payments</span>
+              <span class="infoVal">Cash, Card, Contactless</span>
+            </div>
+          </div>
+
+          <div class="hours">
+            <div class="hours__title">Hours</div>
+            <div class="hours__rows">
+              <div class="hours__row">
+                <span>Sun – Thu</span>
+                <span>10:00 AM – 9:00 PM</span>
+              </div>
+              <div class="hours__row">
+                <span>Fri – Sat</span>
+                <span>10:00 AM – 10:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="storeActions">
+            <a class="btn btn--primary" target="_blank" rel="noopener"
+               href="https://www.google.com/maps/search/?api=1&query=10220%20W%20Reflections%20Blvd"
+            >Get Directions</a>
+            <button class="btn btn--ghost" data-scroll="#contact">Message Us</button>
+          </div>
+        </div>
+
+        <div class="storeVisual reveal" aria-hidden="true">
+          <div class="storeVisual__panel">
+            <img
+              src="https://images.unsplash.com/photo-1520975732131-0f5f0a6cc211?auto=format&fit=crop&w=1600&q=80"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="storeVisual__badge">
+            <div class="badgeTitle">Premium Baby Blue</div>
+            <div class="badgeSub">Highlights • Buttons • Hovers</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__sub">Questions about sizing, drops, or in-store pickup? Send a message.</p>
+        </div>
+
+        <div class="contactGrid">
+          <form class="formCard reveal" id="contactForm" autocomplete="on">
+            <div class="formRow">
+              <label class="label" for="name">Name</label>
+              <input class="input" id="name" name="name" placeholder="Your name" required />
+            </div>
+
+            <div class="formRow">
+              <label class="label" for="phone">Phone</label>
+              <input class="input" id="phone" name="phone" placeholder="(954) 000-0000" inputmode="tel" />
+            </div>
+
+            <div class="formRow">
+              <label class="label" for="email">Email</label>
+              <input class="input" id="email" name="email" type="email" placeholder="you@email.com" required />
+            </div>
+
+            <div class="formRow">
+              <label class="label" for="message">Message</label>
+              <textarea class="input textarea" id="message" name="message" placeholder="Tell us what you’re looking for…" required></textarea>
+            </div>
+
+            <div class="formActions">
+              <button class="btn btn--primary" type="submit">Send Message</button>
+              <p class="fineprint">
+                This basic version uses a “mailto” fallback (opens your email app). Upgrade later to a real form inbox.
+              </p>
+            </div>
+          </form>
+
+          <aside class="asideCard reveal">
+            <div class="asideCard__top">
+              <div class="asideCard__title">Drop Alerts</div>
+              <div class="asideCard__tag">Optional</div>
+            </div>
+            <p class="asideCard__text">Get notified when Noiva releases a new drop. No spam—just the essentials.</p>
+
+            <form class="miniForm" id="newsletterForm">
+              <input class="input" type="email" name="newsletterEmail" placeholder="Email for updates" required />
+              <button class="btn btn--primary btn--small" type="submit">Join</button>
+            </form>
+
+            <div class="divider"></div>
+
+            <div class="trust">
+              <div class="trust__row">
+                <span class="trust__icon">✓</span>
+                <span>Luxury palette & spacing</span>
+              </div>
+              <div class="trust__row">
+                <span class="trust__icon">✓</span>
+                <span>Mobile-first layout</span>
+              </div>
+              <div class="trust__row">
+                <span class="trust__icon">✓</span>
+                <span>Quick-view + cart drawer</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="brand brand--footer">
+          <span class="brand__mark">N</span>
+          <span class="brand__name">Noiva</span>
+        </div>
+        <p class="footer__text">Modern luxury clothing. Baby blue accents. Clean silhouettes.</p>
+        <div class="footer__meta">
+          <a class="link" href="tel:19546295079">(954) 629-5079</a>
+          <span class="sep">•</span>
+          <span>10220 W Reflections Blvd</span>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <div class="linkCol">
+          <div class="linkCol__title">Explore</div>
+          <a href="#new">New</a>
+          <a href="#collections">Collections</a>
+          <a href="#lookbook">Lookbook</a>
+        </div>
+        <div class="linkCol">
+          <div class="linkCol__title">Store</div>
+          <a href="#store">Hours</a>
+          <a href="#contact">Contact</a>
+          <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=10220%20W%20Reflections%20Blvd">Directions</a>
+        </div>
+        <div class="linkCol">
+          <div class="linkCol__title">Policies</div>
+          <a href="#contact" title="Add a real policy page later">Returns (add later)</a>
+          <a href="#contact" title="Add a real policy page later">Shipping (add later)</a>
+          <a href="#contact" title="Add a real policy page later">Privacy (add later)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Noiva. All rights reserved.</span>
+      <button class="toTop" data-scroll="#top" aria-label="Back to top">↑</button>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside class="drawer" id="cartDrawer" aria-hidden="true" aria-label="Shopping cart">
+    <div class="drawer__panel">
+      <div class="drawer__top">
+        <div class="drawer__title">Cart</div>
+        <button class="iconbtn" id="cartClose" aria-label="Close cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6 18 18M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="drawer__content">
+        <div class="cartEmpty" id="cartEmpty">
+          <div class="cartEmpty__icon">🛍️</div>
+          <div class="cartEmpty__title">Your cart is empty</div>
+          <div class="cartEmpty__text">Add a few premium picks to get started.</div>
+          <button class="btn btn--primary" data-scroll="#new" id="shopFromCart">Shop New</button>
+        </div>
+
+        <div class="cartList" id="cartList" hidden></div>
+      </div>
+
+      <div class="drawer__bottom">
+        <div class="totals">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">$0</strong>
+        </div>
+        <button class="btn btn--primary" id="checkoutBtn">Checkout (Demo)</button>
+        <p class="fineprint">Basic version: checkout is a demo button (upgrade later to Shopify/Stripe).</p>
+      </div>
+    </div>
+    <div class="drawer__backdrop" id="cartBackdrop" aria-hidden="true"></div>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div class="modal" id="quickModal" aria-hidden="true" role="dialog" aria-label="Quick view">
+    <div class="modal__panel" role="document">
+      <button class="iconbtn modal__close" id="modalClose" aria-label="Close quick view">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6 18 18M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="modal__grid">
+        <div class="modal__media">
+          <img id="modalImg" alt="" src="" />
+        </div>
+        <div class="modal__body">
+          <div class="modal__kicker">Noiva • New Arrivals</div>
+          <h3 class="modal__title" id="modalTitle">Product</h3>
+          <div class="modal__price" id="modalPrice">$0</div>
+          <p class="modal__desc" id="modalDesc">Description</p>
+
+          <div class="modal__row">
+            <div class="select">
+              <label class="label" for="sizeSelect">Size</label>
+              <select id="sizeSelect" class="input">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+            </div>
+            <div class="select">
+              <label class="label" for="qtySelect">Qty</label>
+              <select id="qtySelect" class="input">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="modal__actions">
+            <button class="btn btn--primary" id="modalAdd">Add to Cart</button>
+            <button class="btn btn--ghost" data-scroll="#contact">Ask About Sizing</button>
+          </div>
+
+          <div class="modal__note">
+            Premium feel tip: keep the product list short + strong.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal__backdrop" id="modalBackdrop" aria-hidden="true"></div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal" id="searchModal" aria-hidden="true" role="dialog" aria-label="Search">
+    <div class="modal__panel modal__panel--search" role="document">
+      <button class="iconbtn modal__close" id="searchClose" aria-label="Close search">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6 18 18M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="searchBox">
+        <div class="searchBox__title">Search products</div>
+        <input class="input" id="searchInput" placeholder="Try: jacket, tee, set, coat…" />
+        <div class="searchBox__hint">Basic demo search filters the “New Arrivals” grid.</div>
+      </div>
+    </div>
+    <div class="modal__backdrop" id="searchBackdrop" aria-hidden="true"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

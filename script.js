@@ -12,6 +12,20 @@
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
+  // dynamic layout offsets
+  const root = document.documentElement;
+  const topbar = $(".topbar");
+
+  function updateOffsets() {
+    if (!topbar) return;
+    const h = topbar.getBoundingClientRect().height;
+    root.style.setProperty("--topbar-height", `${h}px`);
+  }
+
+  updateOffsets();
+  window.addEventListener("resize", updateOffsets);
+  window.addEventListener("load", updateOffsets);
+
   // Year
   const yearEl = $("#year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
